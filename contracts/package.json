@@ -1,0 +1,25 @@
+{
+  "name": "agentforge-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:hela": "hardhat run scripts/deploy.js --network hela",
+    "verify:hela": "hardhat run scripts/verify.js --network hela",
+    "verify:hela:prepare": "hardhat run scripts/prepare-manual-verification.js --network hela",
+    "export:frontend": "hardhat run scripts/export-frontend.js --network hardhat",
+    "export:frontend:hela": "hardhat run scripts/export-frontend.js --network hela",
+    "flow:hela": "npm run deploy:hela && npm run verify:hela && npm run export:frontend:hela",
+    "coverage": "hardhat coverage"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^4.9.6",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.18"
+  }
+}
