@@ -1,0 +1,357 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--nft-primary: #0F172A;
+	--nft-primary-light: #334155;
+	--nft-primary-dark: #020617;
+	--nft-secondary: #64748B;
+	--nft-dark: #0F172A;
+	--nft-darker: #020617;
+	--nft-card: #FFFFFF;
+	--nft-surface: #F8FAFB;
+	--nft-border: #E2E8F0;
+	--nft-text: #0F172A;
+	--nft-muted: #64748B;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--nft-surface);
+	color: var(--nft-text);
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════ SCROLLBAR ═══════════ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+	background: #334155;
+	border-radius: 999px;
+}
+
+/* ═══════════ CLEAN CARD — with gradient border on hover ═══════════ */
+.glass-card {
+	background: #FFFFFF;
+	border: 1px solid rgba(226, 232, 240, 0.8);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+	border-radius: 20px;
+	position: relative;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+	box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04);
+	border-color: rgba(15, 23, 42, 0.1);
+	transform: translateY(-2px);
+}
+
+/* gradient-border card variant */
+.glass-card--glow {
+	background: #FFFFFF;
+	border-radius: 20px;
+	position: relative;
+	border: none;
+	box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.glass-card--glow::before {
+	content: '';
+	position: absolute;
+	inset: -1px;
+	border-radius: 21px;
+	padding: 1.5px;
+	background: linear-gradient(135deg, rgba(15, 23, 42, 0.15), rgba(100, 116, 139, 0.1), rgba(15, 23, 42, 0.05));
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+	transition: opacity 0.4s ease;
+	opacity: 0.6;
+}
+
+.glass-card--glow:hover::before {
+	opacity: 1;
+	background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(100, 116, 139, 0.2), rgba(15, 23, 42, 0.1));
+}
+
+/* ═══════════ DARK SECTION ═══════════ */
+.section-dark {
+	background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+	color: #F8FAFB;
+}
+
+.section-dark .glass-card {
+	background: rgba(255, 255, 255, 0.04);
+	border-color: rgba(255, 255, 255, 0.08);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(12px);
+}
+
+/* ═══════════ GRADIENT TEXT ═══════════ */
+.gradient-text {
+	background: linear-gradient(135deg, #0F172A 0%, #475569 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* ═══════════ APP BACKGROUND ═══════════ */
+.app-bg {
+	background-image:
+		radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.02), transparent 50%),
+		radial-gradient(circle at 90% 80%, rgba(100, 116, 139, 0.02), transparent 50%),
+		radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.01), transparent 60%);
+	background-color: #F8FAFB;
+	min-height: 100vh;
+}
+
+/* ═══════════ BUTTONS ═══════════ */
+.btn-forge {
+	@apply rounded-2xl px-7 py-3 font-semibold text-sm tracking-wide;
+	background: linear-gradient(135deg, #0F172A, #020617);
+	color: #FFFFFF;
+	box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-forge::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.btn-forge:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+}
+
+.btn-forge:hover::after { opacity: 1; }
+
+.btn-forge:active { transform: translateY(0); }
+
+.btn-forge:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+.btn-ghost {
+	@apply rounded-2xl px-6 py-2.5 text-sm font-medium;
+	border: 1.5px solid #E2E8F0;
+	background: rgba(255, 255, 255, 0.8);
+	color: #334155;
+	backdrop-filter: blur(4px);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-ghost:hover {
+	border-color: #334155;
+	color: #0F172A;
+	background: rgba(15, 23, 42, 0.03);
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+	transform: translateY(-1px);
+}
+
+.btn-dark {
+	@apply rounded-2xl px-7 py-2.5 text-sm font-semibold;
+	background: linear-gradient(135deg, #0F172A, #1E293B);
+	color: #FFFFFF;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.btn-dark:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 6px 20px rgba(15, 23, 42, 0.3);
+}
+
+/* ═══════════ DECORATIVE DOTS ═══════════ */
+.deco-dot {
+	position: absolute;
+	border-radius: 50%;
+	pointer-events: none;
+	animation: pulseSoft 3s ease-in-out infinite;
+}
+
+.deco-dot--sm { width: 6px; height: 6px; }
+.deco-dot--md { width: 10px; height: 10px; }
+.deco-dot--lg { width: 14px; height: 14px; }
+
+.deco-dot--primary {
+	background: var(--nft-primary);
+	box-shadow: 0 0 12px rgba(15, 23, 42, 0.3);
+}
+
+.deco-dot--secondary {
+	background: var(--nft-secondary);
+	box-shadow: 0 0 12px rgba(100, 116, 139, 0.3);
+}
+
+.deco-dot--warning {
+	background: #F59E0B;
+	box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.deco-dot--muted {
+	background: #CBD5E1;
+}
+
+/* ═══════════ INPUT STYLES ═══════════ */
+.input-light {
+	@apply w-full rounded-xl border px-4 py-2.5 text-sm outline-none;
+	border-color: #E2E8F0;
+	background: #FFFFFF;
+	color: #0F172A;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-light::placeholder { color: #94A3B8; }
+
+.input-light:focus {
+	border-color: #334155;
+	box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+select.input-light {
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 14px center;
+	padding-right: 36px;
+}
+
+/* ═══════════ SECTION KICKER ═══════════ */
+.section-kicker {
+	@apply text-xs font-bold uppercase tracking-[0.1em] text-slate-500 mb-1 inline-block;
+}
+
+/* ═══════════ PILL TAB SWITCHER ═══════════ */
+.pill-tabs {
+	@apply inline-flex rounded-2xl p-1;
+	background: rgba(241, 245, 249, 0.8);
+	border: 1px solid #E2E8F0;
+	backdrop-filter: blur(4px);
+}
+
+.pill-tab {
+	@apply rounded-xl px-5 py-2 text-sm font-medium;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pill-tab--active {
+	background: linear-gradient(135deg, #0F172A, #020617);
+	color: #FFFFFF;
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+}
+
+.pill-tab--inactive {
+	color: #64748B;
+}
+
+.pill-tab--inactive:hover {
+	color: #0F172A;
+	background: rgba(15, 23, 42, 0.04);
+}
+
+/* ═══════════ GRID DOT PATTERN ═══════════ */
+.dot-pattern {
+	background-image: radial-gradient(circle, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+	background-size: 24px 24px;
+}
+
+/* ═══════════ ANIMATED GRADIENT BG ═══════════ */
+.animated-gradient {
+	background: linear-gradient(-45deg, #F8FAFB, #EEF2FF, #F0FDFA, #F8FAFB);
+	background-size: 400% 400%;
+	animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseSoft {
+	0%, 100% { opacity: 1; transform: scale(1); }
+	50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ═══════════ STAGGER ANIMATION HELPERS ═══════════ */
+.stagger-1 { animation-delay: 0s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.2s; }
+.stagger-4 { animation-delay: 0.3s; }
+
+/* ═══════════ HOVER GLOW RING ═══════════ */
+.hover-glow:hover {
+	box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1), 0 10px 30px rgba(99, 102, 241, 0.12);
+}
+
+/* ═══════════ TABLE STYLES ═══════════ */
+.data-table {
+	@apply min-w-full text-sm;
+}
+
+.data-table thead {
+	background: linear-gradient(135deg, #F8FAFC, #F1F5F9);
+}
+
+.data-table thead th {
+	@apply px-4 py-3.5 text-left text-xs font-bold uppercase tracking-wider;
+	color: #64748B;
+}
+
+.data-table tbody tr {
+	@apply border-t transition-colors duration-200;
+	border-color: rgba(226, 232, 240, 0.6);
+}
+
+.data-table tbody tr:hover {
+	background: rgba(99, 102, 241, 0.02);
+}
+
+.data-table tbody td {
+	@apply px-4 py-3;
+	color: #334155;
+}
+
+/* ═══════════ PAGE HEADER ═══════════ */
+.page-header {
+	@apply space-y-2 pb-2;
+}
+
+.page-header .section-kicker {
+	display: inline-block;
+}
+
+.page-header h1 {
+	@apply font-display text-4xl font-extrabold tracking-tight;
+	color: #0F172A;
+}
+
+.page-header p {
+	@apply text-base;
+	color: #64748B;
+}
