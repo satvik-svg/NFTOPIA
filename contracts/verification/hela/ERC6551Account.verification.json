@@ -1,0 +1,10 @@
+{
+  "key": "ERC6551AccountImplementation",
+  "contractName": "ERC6551Account",
+  "sourceName": "contracts/ERC6551Account.sol",
+  "address": "0x8be0CC2C011D86Bf835442EF1F82ed6c20f30152",
+  "verifyUrl": "https://testnet.helascan.io/address/0x8be0CC2C011D86Bf835442EF1F82ed6c20f30152/contract-verification",
+  "constructorArguments": [],
+  "constructorArgumentsEncoded": "0x",
+  "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\ERC6551Account.flattened.sol"
+}

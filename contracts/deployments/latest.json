@@ -1,0 +1,14 @@
+{
+  "network": "hela",
+  "chainId": 666888,
+  "deployer": "0x1ccbAa524c390a4194a2E188EFf90f9b964d1D1d",
+  "deployedAt": "2026-04-10T20:37:35.133Z",
+  "contracts": {
+    "ForgeToken": "0x73ed7b98a7f2aaF263357D77898d1734BCBA951E",
+    "AgentNFT": "0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F",
+    "ERC6551Registry": "0x2894CEbA0E8F958355E702430C7F3113B3507101",
+    "ERC6551AccountImplementation": "0x8be0CC2C011D86Bf835442EF1F82ed6c20f30152",
+    "JobEscrow": "0x39458D33f37C9f35C71E0b2dad9E82729DbFC005",
+    "RentalMarket": "0xC045a76587AfbAEb59bF52d68751f09621381a82"
+  }
+}

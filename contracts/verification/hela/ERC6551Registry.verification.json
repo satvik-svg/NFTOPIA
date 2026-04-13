@@ -1,0 +1,10 @@
+{
+  "key": "ERC6551Registry",
+  "contractName": "ERC6551Registry",
+  "sourceName": "contracts/ERC6551Registry.sol",
+  "address": "0x2894CEbA0E8F958355E702430C7F3113B3507101",
+  "verifyUrl": "https://testnet.helascan.io/address/0x2894CEbA0E8F958355E702430C7F3113B3507101/contract-verification",
+  "constructorArguments": [],
+  "constructorArgumentsEncoded": "0x",
+  "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\ERC6551Registry.flattened.sol"
+}

@@ -1,0 +1,10 @@
+{
+  "key": "AgentNFT",
+  "contractName": "AgentNFT",
+  "sourceName": "contracts/AgentNFT.sol",
+  "address": "0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F",
+  "verifyUrl": "https://testnet.helascan.io/address/0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F/contract-verification",
+  "constructorArguments": [],
+  "constructorArgumentsEncoded": "0x",
+  "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\AgentNFT.flattened.sol"
+}

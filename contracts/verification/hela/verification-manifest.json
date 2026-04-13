@@ -1,0 +1,83 @@
+{
+  "network": "hela",
+  "chainId": 666888,
+  "compilerVersion": "v0.8.9+commit.e5eed63a",
+  "optimizationEnabled": true,
+  "optimizationRuns": 200,
+  "evmVersion": "default",
+  "license": "MIT",
+  "verificationMethodSuggested": "Solidity (Standard JSON Input)",
+  "standardInputPath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\standard-input-0.8.9.json",
+  "contracts": [
+    {
+      "key": "ForgeToken",
+      "contractName": "ForgeToken",
+      "sourceName": "contracts/ForgeToken.sol",
+      "address": "0x73ed7b98a7f2aaF263357D77898d1734BCBA951E",
+      "verifyUrl": "https://testnet.helascan.io/address/0x73ed7b98a7f2aaF263357D77898d1734BCBA951E/contract-verification",
+      "constructorArguments": [
+        "0x1ccbAa524c390a4194a2E188EFf90f9b964d1D1d"
+      ],
+      "constructorArgumentsEncoded": "0x0000000000000000000000001ccbaa524c390a4194a2e188eff90f9b964d1d1d",
+      "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\ForgeToken.flattened.sol"
+    },
+    {
+      "key": "AgentNFT",
+      "contractName": "AgentNFT",
+      "sourceName": "contracts/AgentNFT.sol",
+      "address": "0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F",
+      "verifyUrl": "https://testnet.helascan.io/address/0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F/contract-verification",
+      "constructorArguments": [],
+      "constructorArgumentsEncoded": "0x",
+      "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\AgentNFT.flattened.sol"
+    },
+    {
+      "key": "ERC6551Registry",
+      "contractName": "ERC6551Registry",
+      "sourceName": "contracts/ERC6551Registry.sol",
+      "address": "0x2894CEbA0E8F958355E702430C7F3113B3507101",
+      "verifyUrl": "https://testnet.helascan.io/address/0x2894CEbA0E8F958355E702430C7F3113B3507101/contract-verification",
+      "constructorArguments": [],
+      "constructorArgumentsEncoded": "0x",
+      "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\ERC6551Registry.flattened.sol"
+    },
+    {
+      "key": "ERC6551AccountImplementation",
+      "contractName": "ERC6551Account",
+      "sourceName": "contracts/ERC6551Account.sol",
+      "address": "0x8be0CC2C011D86Bf835442EF1F82ed6c20f30152",
+      "verifyUrl": "https://testnet.helascan.io/address/0x8be0CC2C011D86Bf835442EF1F82ed6c20f30152/contract-verification",
+      "constructorArguments": [],
+      "constructorArgumentsEncoded": "0x",
+      "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\ERC6551Account.flattened.sol"
+    },
+    {
+      "key": "JobEscrow",
+      "contractName": "JobEscrow",
+      "sourceName": "contracts/JobEscrow.sol",
+      "address": "0x39458D33f37C9f35C71E0b2dad9E82729DbFC005",
+      "verifyUrl": "https://testnet.helascan.io/address/0x39458D33f37C9f35C71E0b2dad9E82729DbFC005/contract-verification",
+      "constructorArguments": [
+        "0x73ed7b98a7f2aaF263357D77898d1734BCBA951E",
+        "0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F",
+        "0x1ccbAa524c390a4194a2E188EFf90f9b964d1D1d"
+      ],
+      "constructorArgumentsEncoded": "0x00000000000000000000000073ed7b98a7f2aaf263357d77898d1734bcba951e000000000000000000000000856d6efed2d248bd962242d1756539cdd2f84f1f0000000000000000000000001ccbaa524c390a4194a2e188eff90f9b964d1d1d",
+      "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\JobEscrow.flattened.sol"
+    },
+    {
+      "key": "RentalMarket",
+      "contractName": "RentalMarket",
+      "sourceName": "contracts/RentalMarket.sol",
+      "address": "0xC045a76587AfbAEb59bF52d68751f09621381a82",
+      "verifyUrl": "https://testnet.helascan.io/address/0xC045a76587AfbAEb59bF52d68751f09621381a82/contract-verification",
+      "constructorArguments": [
+        "0x73ed7b98a7f2aaF263357D77898d1734BCBA951E",
+        "0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F",
+        "0x1ccbAa524c390a4194a2E188EFf90f9b964d1D1d"
+      ],
+      "constructorArgumentsEncoded": "0x00000000000000000000000073ed7b98a7f2aaf263357d77898d1734bcba951e000000000000000000000000856d6efed2d248bd962242d1756539cdd2f84f1f0000000000000000000000001ccbaa524c390a4194a2e188eff90f9b964d1d1d",
+      "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\RentalMarket.flattened.sol"
+    }
+  ]
+}

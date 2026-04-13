@@ -1,0 +1,14 @@
+{
+  "key": "JobEscrow",
+  "contractName": "JobEscrow",
+  "sourceName": "contracts/JobEscrow.sol",
+  "address": "0x39458D33f37C9f35C71E0b2dad9E82729DbFC005",
+  "verifyUrl": "https://testnet.helascan.io/address/0x39458D33f37C9f35C71E0b2dad9E82729DbFC005/contract-verification",
+  "constructorArguments": [
+    "0x73ed7b98a7f2aaF263357D77898d1734BCBA951E",
+    "0x856D6EfEd2D248Bd962242d1756539cdd2f84F1F",
+    "0x1ccbAa524c390a4194a2E188EFf90f9b964d1D1d"
+  ],
+  "constructorArgumentsEncoded": "0x00000000000000000000000073ed7b98a7f2aaf263357d77898d1734bcba951e000000000000000000000000856d6efed2d248bd962242d1756539cdd2f84f1f0000000000000000000000001ccbaa524c390a4194a2e188eff90f9b964d1d1d",
+  "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\JobEscrow.flattened.sol"
+}

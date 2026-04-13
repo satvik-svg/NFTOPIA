@@ -1,0 +1,12 @@
+{
+  "key": "ForgeToken",
+  "contractName": "ForgeToken",
+  "sourceName": "contracts/ForgeToken.sol",
+  "address": "0x73ed7b98a7f2aaF263357D77898d1734BCBA951E",
+  "verifyUrl": "https://testnet.helascan.io/address/0x73ed7b98a7f2aaF263357D77898d1734BCBA951E/contract-verification",
+  "constructorArguments": [
+    "0x1ccbAa524c390a4194a2E188EFf90f9b964d1D1d"
+  ],
+  "constructorArgumentsEncoded": "0x0000000000000000000000001ccbaa524c390a4194a2e188eff90f9b964d1d1d",
+  "flattenedSourcePath": "C:\\Users\\onlys\\Desktop\\NFTOPIA\\contracts\\verification\\hela\\flattened\\ForgeToken.flattened.sol"
+}
